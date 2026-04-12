@@ -1,6 +1,7 @@
 {
   "name": "german-flashcards",
   "version": "1.0.0",
+  "homepage": "https://PratyushPaliwal.github.io/de_cards",
   "private": true,
   "description": "German vocabulary flashcard app with spaced repetition",
   "scripts": {
