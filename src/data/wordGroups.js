@@ -1,0 +1,800 @@
+/**
+ * ============================================================
+ *  WORTSCHATZ — GERMAN WORD GROUPS
+ * ============================================================
+ *
+ *  This is the ONLY file you need to edit to add new words.
+ *
+ *  ── WORD TYPES ──────────────────────────────────────────
+ *  type: "noun"        → der/die/das Wort
+ *  type: "verb"        → kochen, gehen, kaufen
+ *  type: "adjective"   → groß, klein, schön
+ *  type: "adverb"      → schnell, sehr, immer
+ *  type: "phrase"      → Wie geht es dir?
+ *
+ *  ── FOR NOUNS ────────────────────────────────────────────
+ *  gender: "m"   → der (masculine)
+ *  gender: "f"   → die (feminine)
+ *  gender: "n"   → das (neuter)
+ *  plural: "die Äpfel"  → optional but helpful
+ *
+ *  ── FOR VERBS ────────────────────────────────────────────
+ *  auxiliary: "haben"  or  "sein"   → used in perfect tense
+ *  past: "gekocht"                  → past participle
+ *
+ *  ── FOR ADJECTIVES ───────────────────────────────────────
+ *  comparative: "größer"            → optional
+ *  superlative: "am größten"        → optional
+ *
+ *  ── ADD A NEW GROUP ──────────────────────────────────────
+ *  Copy the template below and paste it at the end of the
+ *  array (before the closing ]; ), add a comma after the
+ *  previous group's closing brace.
+ *
+ *  TEMPLATE:
+ *  {
+ *    id: "unique_id",       // lowercase, underscores only
+ *    name: "Group Name",
+ *    emoji: "🎯",
+ *    words: [
+ *      {
+ *        german: "das Wort",
+ *        english: "the word",
+ *        type: "noun",
+ *        gender: "n",
+ *        plural: "die Wörter",
+ *        example: "Das ist ein neues Wort.",
+ *      },
+ *    ],
+ *  },
+ * ============================================================
+ */
+
+const wordGroups = [
+  // ── 1. TRAVEL ──────────────────────────────────────────────
+  {
+    id: "travel",
+    name: "Travel",
+    emoji: "✈️",
+    words: [
+      {
+        german: "der Flughafen",
+        english: "airport",
+        type: "noun",
+        gender: "m",
+        plural: "die Flughäfen",
+        example: "Wir treffen uns am Flughafen.",
+      },
+      {
+        german: "der Bahnhof",
+        english: "train station",
+        type: "noun",
+        gender: "m",
+        plural: "die Bahnhöfe",
+        example: "Der Bahnhof ist zehn Minuten entfernt.",
+      },
+      {
+        german: "das Ticket",
+        english: "ticket",
+        type: "noun",
+        gender: "n",
+        plural: "die Tickets",
+        example: "Ich habe zwei Tickets gekauft.",
+      },
+      {
+        german: "der Koffer",
+        english: "suitcase",
+        type: "noun",
+        gender: "m",
+        plural: "die Koffer",
+        example: "Mein Koffer ist zu schwer.",
+      },
+      {
+        german: "die Reise",
+        english: "trip, journey",
+        type: "noun",
+        gender: "f",
+        plural: "die Reisen",
+        example: "Die Reise nach München war wunderschön.",
+      },
+      {
+        german: "reisen",
+        english: "to travel",
+        type: "verb",
+        auxiliary: "sein",
+        past: "gereist",
+        example: "Ich reise gerne im Sommer.",
+      },
+      {
+        german: "der Pass",
+        english: "passport",
+        type: "noun",
+        gender: "m",
+        plural: "die Pässe",
+        example: "Vergiss deinen Pass nicht!",
+      },
+      {
+        german: "die Unterkunft",
+        english: "accommodation",
+        type: "noun",
+        gender: "f",
+        plural: "die Unterkünfte",
+        example: "Wir suchen eine günstige Unterkunft.",
+      },
+      {
+        german: "ankommen",
+        english: "to arrive",
+        type: "verb",
+        auxiliary: "sein",
+        past: "angekommen",
+        example: "Wir kommen morgen früh an.",
+      },
+      {
+        german: "abfahren",
+        english: "to depart",
+        type: "verb",
+        auxiliary: "sein",
+        past: "abgefahren",
+        example: "Der Zug fährt um 9 Uhr ab.",
+      },
+      {
+        german: "pünktlich",
+        english: "on time, punctual",
+        type: "adjective",
+        comparative: "pünktlicher",
+        superlative: "am pünktlichsten",
+        example: "Der Bus ist immer pünktlich.",
+      },
+      {
+        german: "die Landkarte",
+        english: "map",
+        type: "noun",
+        gender: "f",
+        plural: "die Landkarten",
+        example: "Hast du eine Landkarte dabei?",
+      },
+      {
+        german: "das Ausland",
+        english: "foreign country, abroad",
+        type: "noun",
+        gender: "n",
+        example: "Sie arbeitet im Ausland.",
+      },
+      {
+        german: "buchen",
+        english: "to book, to reserve",
+        type: "verb",
+        auxiliary: "haben",
+        past: "gebucht",
+        example: "Ich habe das Hotel online gebucht.",
+      },
+      {
+        german: "der Zug",
+        english: "train",
+        type: "noun",
+        gender: "m",
+        plural: "die Züge",
+        example: "Der Zug nach Berlin fährt gleich.",
+      },
+    ],
+  },
+
+  // ── 2. HOUSEHOLD ───────────────────────────────────────────
+  {
+    id: "household",
+    name: "Household Items",
+    emoji: "🏠",
+    words: [
+      {
+        german: "der Stuhl",
+        english: "chair",
+        type: "noun",
+        gender: "m",
+        plural: "die Stühle",
+        example: "Der Stuhl steht am Tisch.",
+      },
+      {
+        german: "der Tisch",
+        english: "table",
+        type: "noun",
+        gender: "m",
+        plural: "die Tische",
+        example: "Das Essen steht auf dem Tisch.",
+      },
+      {
+        german: "das Bett",
+        english: "bed",
+        type: "noun",
+        gender: "n",
+        plural: "die Betten",
+        example: "Ich gehe früh ins Bett.",
+      },
+      {
+        german: "der Schrank",
+        english: "wardrobe, cupboard",
+        type: "noun",
+        gender: "m",
+        plural: "die Schränke",
+        example: "Meine Kleider hängen im Schrank.",
+      },
+      {
+        german: "das Fenster",
+        english: "window",
+        type: "noun",
+        gender: "n",
+        plural: "die Fenster",
+        example: "Bitte öffne das Fenster.",
+      },
+      {
+        german: "die Tür",
+        english: "door",
+        type: "noun",
+        gender: "f",
+        plural: "die Türen",
+        example: "Die Tür ist abgeschlossen.",
+      },
+      {
+        german: "die Lampe",
+        english: "lamp, light",
+        type: "noun",
+        gender: "f",
+        plural: "die Lampen",
+        example: "Die Lampe gibt warmes Licht.",
+      },
+      {
+        german: "der Spiegel",
+        english: "mirror",
+        type: "noun",
+        gender: "m",
+        plural: "die Spiegel",
+        example: "Er schaut in den Spiegel.",
+      },
+      {
+        german: "das Kissen",
+        english: "pillow, cushion",
+        type: "noun",
+        gender: "n",
+        plural: "die Kissen",
+        example: "Das Kissen ist sehr weich.",
+      },
+      {
+        german: "der Teppich",
+        english: "carpet, rug",
+        type: "noun",
+        gender: "m",
+        plural: "die Teppiche",
+        example: "Der Teppich ist rot.",
+      },
+      {
+        german: "das Regal",
+        english: "shelf, bookcase",
+        type: "noun",
+        gender: "n",
+        plural: "die Regale",
+        example: "Die Bücher stehen im Regal.",
+      },
+      {
+        german: "der Herd",
+        english: "stove, cooker",
+        type: "noun",
+        gender: "m",
+        plural: "die Herde",
+        example: "Der Herd ist sehr heiß.",
+      },
+      {
+        german: "aufräumen",
+        english: "to tidy up, to clean up",
+        type: "verb",
+        auxiliary: "haben",
+        past: "aufgeräumt",
+        example: "Ich räume jeden Samstag auf.",
+      },
+      {
+        german: "gemütlich",
+        english: "cosy, comfortable",
+        type: "adjective",
+        example: "Das Wohnzimmer ist sehr gemütlich.",
+      },
+      {
+        german: "die Küche",
+        english: "kitchen",
+        type: "noun",
+        gender: "f",
+        plural: "die Küchen",
+        example: "Die Küche ist neu renoviert.",
+      },
+    ],
+  },
+
+  // ── 3. COOKING ─────────────────────────────────────────────
+  {
+    id: "cooking",
+    name: "Cooking & Kitchen",
+    emoji: "🍳",
+    words: [
+      {
+        german: "kochen",
+        english: "to cook, to boil",
+        type: "verb",
+        auxiliary: "haben",
+        past: "gekocht",
+        example: "Ich koche jeden Abend.",
+      },
+      {
+        german: "das Rezept",
+        english: "recipe",
+        type: "noun",
+        gender: "n",
+        plural: "die Rezepte",
+        example: "Hast du ein gutes Rezept für Gulasch?",
+      },
+      {
+        german: "die Pfanne",
+        english: "frying pan",
+        type: "noun",
+        gender: "f",
+        plural: "die Pfannen",
+        example: "Erhitze Öl in der Pfanne.",
+      },
+      {
+        german: "der Topf",
+        english: "pot, saucepan",
+        type: "noun",
+        gender: "m",
+        plural: "die Töpfe",
+        example: "Das Wasser kocht im Topf.",
+      },
+      {
+        german: "das Messer",
+        english: "knife",
+        type: "noun",
+        gender: "n",
+        plural: "die Messer",
+        example: "Pass auf das scharfe Messer auf.",
+      },
+      {
+        german: "würzen",
+        english: "to season, to spice",
+        type: "verb",
+        auxiliary: "haben",
+        past: "gewürzt",
+        example: "Würze die Suppe mit Salz und Pfeffer.",
+      },
+      {
+        german: "braten",
+        english: "to fry, to roast",
+        type: "verb",
+        auxiliary: "haben",
+        past: "gebraten",
+        example: "Ich brate das Fleisch in der Pfanne.",
+      },
+      {
+        german: "backen",
+        english: "to bake",
+        type: "verb",
+        auxiliary: "haben",
+        past: "gebacken",
+        example: "Sie backt jeden Sonntag einen Kuchen.",
+      },
+      {
+        german: "das Salz",
+        english: "salt",
+        type: "noun",
+        gender: "n",
+        example: "Kannst du mir das Salz geben?",
+      },
+      {
+        german: "scharf",
+        english: "spicy, sharp",
+        type: "adjective",
+        comparative: "schärfer",
+        superlative: "am schärfsten",
+        example: "Das Essen ist zu scharf für mich.",
+      },
+      {
+        german: "lecker",
+        english: "delicious, tasty",
+        type: "adjective",
+        example: "Die Suppe schmeckt sehr lecker.",
+      },
+      {
+        german: "der Backofen",
+        english: "oven",
+        type: "noun",
+        gender: "m",
+        plural: "die Backöfen",
+        example: "Stelle den Backofen auf 200 Grad.",
+      },
+      {
+        german: "schneiden",
+        english: "to cut, to slice",
+        type: "verb",
+        auxiliary: "haben",
+        past: "geschnitten",
+        example: "Schneide die Zwiebeln klein.",
+      },
+      {
+        german: "die Zutat",
+        english: "ingredient",
+        type: "noun",
+        gender: "f",
+        plural: "die Zutaten",
+        example: "Alle Zutaten sind frisch.",
+      },
+      {
+        german: "rühren",
+        english: "to stir, to mix",
+        type: "verb",
+        auxiliary: "haben",
+        past: "gerührt",
+        example: "Rühre die Soße regelmäßig um.",
+      },
+    ],
+  },
+
+  // ── 4. FRUITS & VEGETABLES ─────────────────────────────────
+  {
+    id: "fruits_vegetables",
+    name: "Fruits & Vegetables",
+    emoji: "🍎",
+    words: [
+      {
+        german: "der Apfel",
+        english: "apple",
+        type: "noun",
+        gender: "m",
+        plural: "die Äpfel",
+        example: "Ein Apfel am Tag hält den Arzt fern.",
+      },
+      {
+        german: "die Banane",
+        english: "banana",
+        type: "noun",
+        gender: "f",
+        plural: "die Bananen",
+        example: "Die Banane ist reif und gelb.",
+      },
+      {
+        german: "die Erdbeere",
+        english: "strawberry",
+        type: "noun",
+        gender: "f",
+        plural: "die Erdbeeren",
+        example: "Im Sommer esse ich gerne Erdbeeren.",
+      },
+      {
+        german: "die Karotte",
+        english: "carrot",
+        type: "noun",
+        gender: "f",
+        plural: "die Karotten",
+        example: "Karotten sind gut für die Augen.",
+      },
+      {
+        german: "die Tomate",
+        english: "tomato",
+        type: "noun",
+        gender: "f",
+        plural: "die Tomaten",
+        example: "Die Tomaten aus dem Garten schmecken am besten.",
+      },
+      {
+        german: "die Kartoffel",
+        english: "potato",
+        type: "noun",
+        gender: "f",
+        plural: "die Kartoffeln",
+        example: "Kartoffeln sind in Deutschland sehr beliebt.",
+      },
+      {
+        german: "die Zwiebel",
+        english: "onion",
+        type: "noun",
+        gender: "f",
+        plural: "die Zwiebeln",
+        example: "Beim Schneiden der Zwiebeln weine ich immer.",
+      },
+      {
+        german: "der Knoblauch",
+        english: "garlic",
+        type: "noun",
+        gender: "m",
+        example: "Knoblauch macht das Essen sehr aromatisch.",
+      },
+      {
+        german: "die Zitrone",
+        english: "lemon",
+        type: "noun",
+        gender: "f",
+        plural: "die Zitronen",
+        example: "Ich trinke Wasser mit Zitrone.",
+      },
+      {
+        german: "die Traube",
+        english: "grape",
+        type: "noun",
+        gender: "f",
+        plural: "die Trauben",
+        example: "Diese Trauben sind sehr süß.",
+      },
+      {
+        german: "reif",
+        english: "ripe, mature",
+        type: "adjective",
+        comparative: "reifer",
+        superlative: "am reifsten",
+        example: "Die Mango ist noch nicht reif.",
+      },
+      {
+        german: "frisch",
+        english: "fresh",
+        type: "adjective",
+        comparative: "frischer",
+        superlative: "am frischsten",
+        example: "Das Gemüse ist sehr frisch.",
+      },
+      {
+        german: "der Spinat",
+        english: "spinach",
+        type: "noun",
+        gender: "m",
+        example: "Spinat enthält viel Eisen.",
+      },
+      {
+        german: "die Birne",
+        english: "pear",
+        type: "noun",
+        gender: "f",
+        plural: "die Birnen",
+        example: "Die Birne ist süß und saftig.",
+      },
+      {
+        german: "der Pfirsich",
+        english: "peach",
+        type: "noun",
+        gender: "m",
+        plural: "die Pfirsiche",
+        example: "Pfirsiche schmecken im Sommer am besten.",
+      },
+    ],
+  },
+
+  // ── 5. COLORS ──────────────────────────────────────────────
+  {
+    id: "colors",
+    name: "Colors & Shades",
+    emoji: "🎨",
+    words: [
+      {
+        german: "rot",
+        english: "red",
+        type: "adjective",
+        example: "Das Auto ist leuchtend rot.",
+      },
+      {
+        german: "blau",
+        english: "blue",
+        type: "adjective",
+        example: "Der Himmel ist heute strahlend blau.",
+      },
+      {
+        german: "grün",
+        english: "green",
+        type: "adjective",
+        example: "Das Gras ist grün nach dem Regen.",
+      },
+      {
+        german: "gelb",
+        english: "yellow",
+        type: "adjective",
+        example: "Die Sonne scheint gelb am Himmel.",
+      },
+      {
+        german: "schwarz",
+        english: "black",
+        type: "adjective",
+        comparative: "schwärzer",
+        superlative: "am schwärzesten",
+        example: "Sie trägt immer schwarz.",
+      },
+      {
+        german: "weiß",
+        english: "white",
+        type: "adjective",
+        example: "Der Schnee ist weiß und weich.",
+      },
+      {
+        german: "grau",
+        english: "grey",
+        type: "adjective",
+        example: "Der Himmel ist heute grau und bewölkt.",
+      },
+      {
+        german: "braun",
+        english: "brown",
+        type: "adjective",
+        example: "Das Pferd ist braun.",
+      },
+      {
+        german: "lila",
+        english: "purple, violet",
+        type: "adjective",
+        example: "Die Lavendel sind lila.",
+      },
+      {
+        german: "orange",
+        english: "orange",
+        type: "adjective",
+        example: "Die Orangen sind orange.",
+      },
+      {
+        german: "rosa",
+        english: "pink",
+        type: "adjective",
+        example: "Sie mag rosa Kleider.",
+      },
+      {
+        german: "dunkel",
+        english: "dark",
+        type: "adjective",
+        comparative: "dunkler",
+        superlative: "am dunkelsten",
+        example: "Das Zimmer ist sehr dunkel.",
+      },
+      {
+        german: "hell",
+        english: "light, bright",
+        type: "adjective",
+        comparative: "heller",
+        superlative: "am hellsten",
+        example: "Das Büro ist sehr hell.",
+      },
+      {
+        german: "bunt",
+        english: "colourful, bright",
+        type: "adjective",
+        example: "Die Blumen sind sehr bunt.",
+      },
+      {
+        german: "die Farbe",
+        english: "colour, paint",
+        type: "noun",
+        gender: "f",
+        plural: "die Farben",
+        example: "Meine Lieblingsfarbe ist Blau.",
+      },
+    ],
+  },
+
+  // ── 6. STATIONERY & SCHOOL ─────────────────────────────────
+  {
+    id: "stationery",
+    name: "Stationery & School",
+    emoji: "✏️",
+    words: [
+      {
+        german: "der Stift",
+        english: "pen, pencil",
+        type: "noun",
+        gender: "m",
+        plural: "die Stifte",
+        example: "Leihst du mir deinen Stift?",
+      },
+      {
+        german: "das Heft",
+        english: "notebook, exercise book",
+        type: "noun",
+        gender: "n",
+        plural: "die Hefte",
+        example: "Ich schreibe alles ins Heft.",
+      },
+      {
+        german: "das Buch",
+        english: "book",
+        type: "noun",
+        gender: "n",
+        plural: "die Bücher",
+        example: "Ich lese jeden Abend ein Buch.",
+      },
+      {
+        german: "der Radiergummi",
+        english: "eraser, rubber",
+        type: "noun",
+        gender: "m",
+        plural: "die Radiergummis",
+        example: "Ich brauche einen Radiergummi.",
+      },
+      {
+        german: "der Bleistift",
+        english: "pencil",
+        type: "noun",
+        gender: "m",
+        plural: "die Bleistifte",
+        example: "Zeichne mit dem Bleistift.",
+      },
+      {
+        german: "die Schere",
+        english: "scissors",
+        type: "noun",
+        gender: "f",
+        plural: "die Scheren",
+        example: "Pass auf mit der Schere!",
+      },
+      {
+        german: "der Kleber",
+        english: "glue, adhesive",
+        type: "noun",
+        gender: "m",
+        plural: "die Kleber",
+        example: "Ich brauche Kleber für dieses Projekt.",
+      },
+      {
+        german: "lernen",
+        english: "to learn, to study",
+        type: "verb",
+        auxiliary: "haben",
+        past: "gelernt",
+        example: "Ich lerne täglich neue Wörter.",
+      },
+      {
+        german: "schreiben",
+        english: "to write",
+        type: "verb",
+        auxiliary: "haben",
+        past: "geschrieben",
+        example: "Schreib deinen Namen auf das Blatt.",
+      },
+      {
+        german: "lesen",
+        english: "to read",
+        type: "verb",
+        auxiliary: "haben",
+        past: "gelesen",
+        example: "Kannst du das laut vorlesen?",
+      },
+      {
+        german: "das Lineal",
+        english: "ruler",
+        type: "noun",
+        gender: "n",
+        plural: "die Lineale",
+        example: "Zeichne eine gerade Linie mit dem Lineal.",
+      },
+      {
+        german: "der Rucksack",
+        english: "backpack, rucksack",
+        type: "noun",
+        gender: "m",
+        plural: "die Rucksäcke",
+        example: "Mein Rucksack ist heute sehr schwer.",
+      },
+      {
+        german: "fleißig",
+        english: "diligent, hardworking",
+        type: "adjective",
+        comparative: "fleißiger",
+        superlative: "am fleißigsten",
+        example: "Sie ist eine sehr fleißige Schülerin.",
+      },
+      {
+        german: "die Hausaufgaben",
+        english: "homework",
+        type: "noun",
+        gender: "f",
+        plural: "die Hausaufgaben",
+        example: "Ich mache meine Hausaufgaben nach der Schule.",
+      },
+      {
+        german: "verstehen",
+        english: "to understand",
+        type: "verb",
+        auxiliary: "haben",
+        past: "verstanden",
+        example: "Hast du die Aufgabe verstanden?",
+      },
+    ],
+  },
+
+];
+
+export default wordGroups;

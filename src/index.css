@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream-100 text-ink-900 antialiased;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Remove tap highlight on mobile */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  /* sage color utilities not in default tailwind */
+  .bg-sage-100 { background-color: #d4e8d5; }
+  .bg-sage-500 { background-color: #5c8460; }
+  .bg-sage-600 { background-color: #3f6142; }
+  .text-sage-500 { color: #5c8460; }
+  .text-sage-600 { color: #3f6142; }
+  .text-sage-800 { color: #2a4a2c; }
+  .border-sage-500 { border-color: #5c8460; }
+}
