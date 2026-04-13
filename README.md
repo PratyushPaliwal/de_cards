@@ -2,7 +2,7 @@
 
 A German vocabulary flashcard app with spaced repetition — inspired by Magoosh GRE Flashcards.
 
-**Live app:** https://yourusername.github.io/german-flashcards
+**Live app:** https://decards.app
 
 ---
 
@@ -12,7 +12,7 @@ A German vocabulary flashcard app with spaced repetition — inspired by Magoosh
 - 🔄 Spaced repetition using the SM2 algorithm (same as Anki)
 - 📖 Dictionary-style word info: noun genders, verb conjugations, adjective comparatives
 - 📊 Progress tracking: New → Learning → Familiar → Mastered
-- 💾 Progress saved in your browser (no account needed)
+- 🔐 Google Sign-In with cross-device progress sync via Firebase
 - 📱 Works on mobile and desktop
 
 ---
@@ -76,26 +76,15 @@ npm install
 npm start
 ```
 
-## Deploying to GitHub Pages
-
-```bash
-npm install
-npm run build
-npm run deploy
-```
-
-Then go to your repo **Settings → Pages → Source → gh-pages branch**.
-
-Your app will be live at `https://yourusername.github.io/german-flashcards`.
-
 ---
 
 ## Tech Stack
 
 - React 18
 - Tailwind CSS
+- Firebase Auth (Google Sign-In)
+- Firestore (cross-device progress sync)
 - SM2 Spaced Repetition Algorithm
-- localStorage for progress persistence
 
 ---
 
@@ -107,7 +96,20 @@ After you flip a card you choose **Got it** or **Didn't know it**. The SM2 algor
 - **Didn't know it** → shown again tomorrow, interval resets
 
 Words graduate through four stages:
+
 1. **New** — never studied
 2. **Learning** — seen 1–2 times correctly
 3. **Familiar** — seen 3–4 times correctly
 4. **Mastered** — seen 5+ times correctly
+
+---
+
+## Contributing
+
+The word list is the heart of this project. If you spot a mistake in a word, gender, example sentence, or want to suggest a new group, feel free to open a pull request or an issue.
+
+---
+
+## License
+
+MIT — free to use, fork, and adapt.
