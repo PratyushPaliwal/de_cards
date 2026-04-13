@@ -1,7 +1,7 @@
 {
   "name": "german-flashcards",
   "version": "1.0.0",
-  "homepage": "https://PratyushPaliwal.github.io/de_cards",
+  "homepage": "https://decards.app",
   "private": true,
   "description": "German vocabulary flashcard app with spaced repetition",
   "scripts": {
@@ -10,6 +10,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "firebase": "^10.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
