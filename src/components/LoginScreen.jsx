@@ -18,7 +18,7 @@ export function LoginScreen({ onSignIn }) {
         {/* Card */}
         <div className="bg-cream-50 border-2 border-ink-900 rounded-2xl p-8 shadow-card-lg">
           <h2 className="font-display text-2xl font-semibold text-ink-900 mb-2">
-            Welcome back
+            Welcome
           </h2>
           <p className="text-ink-700/60 text-sm mb-8">
             Sign in to save your progress across all your devices and compete with friends.
